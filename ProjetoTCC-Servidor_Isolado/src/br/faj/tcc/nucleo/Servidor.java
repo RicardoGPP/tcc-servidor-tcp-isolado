@@ -43,11 +43,7 @@ public class Servidor<T extends Serializable> implements Runnable
 		@throws InstantiationException
 	*/
 	public Servidor(Class<? extends TratadorRequisicao<T>> tratadorRequisicao) throws InstantiationException,
-																					  IllegalAccessException,
-																					  IllegalArgumentException,
-																					  InvocationTargetException,
-																					  NoSuchMethodException,
-																					  SecurityException
+	IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException
 	{
 		this.serverSocket = null;
 		this.requisicoes = new Fila<>();
@@ -70,12 +66,7 @@ public class Servidor<T extends Serializable> implements Runnable
 		@throws TratadorEventoNuloException
 	*/
 	public Servidor(Class<? extends TratadorRequisicao<T>> tratadorRequisicao, TratadorEvento<T> tratadorEvento) throws InstantiationException,
-	  																											        IllegalAccessException,
-																													    IllegalArgumentException,
-																													    InvocationTargetException,
-																													    NoSuchMethodException,
-																													    SecurityException,
-																													    TratadorEventoNuloException
+	IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException, TratadorEventoNuloException
 	{
 		this.serverSocket = null;
 		this.requisicoes = new Fila<>();
