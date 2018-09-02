@@ -1,9 +1,10 @@
-package br.faj.tcc.gestao;
+package br.faj.tcc.servidor.gestao;
 
 import java.io.IOException;
 import java.io.Serializable;
-import br.faj.tcc.util.Requisicao;
-import br.faj.tcc.util.Fila;
+
+import br.faj.tcc.servidor.util.Fila;
+import br.faj.tcc.servidor.util.Requisicao;
 
 /**
 	Módulo de tratamento de requisições, garantindo o fluxo de abertura, execução e fechamento. No uso do

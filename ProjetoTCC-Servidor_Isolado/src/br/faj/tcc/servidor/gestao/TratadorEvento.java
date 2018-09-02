@@ -1,9 +1,10 @@
-package br.faj.tcc.gestao;
+package br.faj.tcc.servidor.gestao;
 
 import java.io.Serializable;
 import java.net.ServerSocket;
 import java.net.Socket;
-import br.faj.tcc.util.Requisicao;
+
+import br.faj.tcc.servidor.util.Requisicao;
 
 /**
 	É responsável por conter os métodos que serão chamados antes e após os eventos específicos

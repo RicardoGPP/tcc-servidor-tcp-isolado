@@ -1,4 +1,4 @@
-package br.faj.tcc.nucleo;
+package br.faj.tcc.servidor.nucleo;
 
 import java.io.IOException;
 import java.io.Serializable;
@@ -6,11 +6,12 @@ import java.lang.reflect.InvocationTargetException;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.SocketException;
-import br.faj.tcc.excecao.TratadorEventoNuloException;
-import br.faj.tcc.gestao.TratadorEvento;
-import br.faj.tcc.gestao.TratadorRequisicao;
-import br.faj.tcc.util.Requisicao;
-import br.faj.tcc.util.Fila;
+
+import br.faj.tcc.servidor.excecao.TratadorEventoNuloException;
+import br.faj.tcc.servidor.gestao.TratadorEvento;
+import br.faj.tcc.servidor.gestao.TratadorRequisicao;
+import br.faj.tcc.servidor.util.Fila;
+import br.faj.tcc.servidor.util.Requisicao;
 
 /**
 	Controla a comunicação com os clientes, permitindo novas conexões, adicionando-as a uma fila

@@ -1,4 +1,4 @@
-package br.faj.tcc.excecao;
+package br.faj.tcc.servidor.excecao;
 
 /**
 	Exceção a ser lançada quando o tratador de eventos passado ao construtor do servidor for nulo.

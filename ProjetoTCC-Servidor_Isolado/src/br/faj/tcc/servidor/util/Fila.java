@@ -1,4 +1,4 @@
-package br.faj.tcc.util;
+package br.faj.tcc.servidor.util;
 
 import java.util.ArrayList;
 import java.util.List;
