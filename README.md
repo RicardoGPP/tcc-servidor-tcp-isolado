@@ -46,7 +46,7 @@ O tratador de eventos definido pelo programador:
 <pre>
 public class MeuTratadorEvento extends TratadorEvento
 {
-  @override
+  @Override
   public void depoisDeIniciar(ServerSocket serverSocket)
   {
     System.out.println("Servidor iniciado na porta " + serverSocket.getLocalPort() + ".");
