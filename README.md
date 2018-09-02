@@ -9,10 +9,12 @@ O tratador de requisições definido pelo programador:
 <pre>
 public class MeuTratadorRequisicao extends TratadorRequisicao&lt;String&gt;
 {
+  ...
   public void gerenciar(Requisicao&lt;String&gt; requisicao)
   {
     System.out.println("O cliente me enviou: " + requisicao.ler() + ".");
   }
+  ...
 }
 </pre>
 
