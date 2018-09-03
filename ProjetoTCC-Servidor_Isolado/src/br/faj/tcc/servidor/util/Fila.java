@@ -13,14 +13,14 @@ import java.util.List;
 */
 public class Fila<T>
 {
-	private List<T> objetos;
+	private List<T> elementos;
 	
 	/**
 		Instancia uma fila vazia.
 	*/
 	public Fila()
 	{
-		this.objetos = new ArrayList<>();
+		this.elementos = new ArrayList<>();
 	}
 	
 	/**
@@ -30,7 +30,7 @@ public class Fila<T>
 	*/
 	public synchronized void adicionar(T elemento)
 	{
-		this.objetos.add(elemento);
+		this.elementos.add(elemento);
 	}
 	
 	/**
@@ -41,6 +41,6 @@ public class Fila<T>
 	*/
 	public synchronized T remover()
 	{
-		return (this.objetos.size() > 0) ? this.objetos.remove(0) : null;
+		return (this.elementos.size() > 0) ? this.elementos.remove(0) : null;
 	}
 }

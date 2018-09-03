@@ -116,11 +116,11 @@ public class Servidor<T extends Serializable> implements Runnable
 		{
 			this.tratadorEvento.antesDeIniciar();
 			this.serverSocket = new ServerSocket(porta);
+			this.tratadorEvento.depoisDeIniciar(this.serverSocket);
 			if (this.tratadorRequisicao.estaEmExecucao())
 				this.tratadorRequisicao.parar();
 			(this.thread = new Thread(this)).start();
-			this.tratadorRequisicao.iniciar();
-			this.tratadorEvento.depoisDeIniciar(this.serverSocket);
+			this.tratadorRequisicao.iniciar();			
 		}
 	}
 	
@@ -141,5 +141,16 @@ public class Servidor<T extends Serializable> implements Runnable
 				this.serverSocket.close();
 			this.tratadorEvento.depoisDeParar(this.serverSocket);
 		}
+	}
+	
+	/**
+		Verifica se o tratador de requisições está em execução.
+		
+		@return <b>true</> se o servidor estiver em execução e <b>false</b> se não estiver.
+	*/
+	public boolean estaEmExecucao()
+	{
+		return ((this.thread != null) && (this.thread.isAlive()) &&
+			   (this.tratadorRequisicao != null) && (this.tratadorRequisicao.estaEmExecucao()));
 	}
 }
